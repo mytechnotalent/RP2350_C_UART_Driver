@@ -1,0 +1,24 @@
+{
+    "configurations": [
+        {
+            "name": "ARM GCC",
+            "includePath": [
+                "${workspaceFolder}/**"
+            ],
+            "defines": [
+                "__GNUC__",
+                "__ARM_ARCH_8M_MAIN__",
+                "__ARMCC_VERSION"
+            ],
+            "compilerPath": "arm-none-eabi-gcc",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "gcc-arm",
+            "compilerArgs": [
+                "-mcpu=cortex-m33",
+                "-mthumb"
+            ]
+        }
+    ],
+    "version": 4
+}
