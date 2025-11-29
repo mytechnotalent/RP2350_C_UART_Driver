@@ -10,7 +10,7 @@ REM Automates the process of compiling, linking, and generating UF2 firmware.
 REM
 REM AUTHOR: Kevin Thomas
 REM CREATION DATE: November 27, 2025
-REM UPDATE DATE: November 27, 2025
+REM UPDATE DATE: November 29, 2025
 REM ==============================================================================
 
 echo Building C version...
@@ -18,37 +18,37 @@ echo Building C version...
 REM ==============================================================================
 REM Compile C Source Files
 REM ==============================================================================
-arm-none-eabi-gcc -mcpu=cortex-m33 -mthumb -O2 -Wall -Wextra -ffunction-sections -fdata-sections -c vector_table.c -o vector_table.o
+arm-none-eabi-gcc -mcpu=cortex-m33 -mthumb -Og -g3 -Wall -Wextra -ffunction-sections -fdata-sections -c vector_table.c -o vector_table.o
 if errorlevel 1 goto error
 
-arm-none-eabi-gcc -mcpu=cortex-m33 -mthumb -O2 -Wall -Wextra -ffunction-sections -fdata-sections -c reset_handler.c -o reset_handler.o
+arm-none-eabi-gcc -mcpu=cortex-m33 -mthumb -Og -g3 -Wall -Wextra -ffunction-sections -fdata-sections -c reset_handler.c -o reset_handler.o
 if errorlevel 1 goto error
 
-arm-none-eabi-gcc -mcpu=cortex-m33 -mthumb -O2 -Wall -Wextra -ffunction-sections -fdata-sections -c stack.c -o stack.o
+arm-none-eabi-gcc -mcpu=cortex-m33 -mthumb -Og -g3 -Wall -Wextra -ffunction-sections -fdata-sections -c stack.c -o stack.o
 if errorlevel 1 goto error
 
-arm-none-eabi-gcc -mcpu=cortex-m33 -mthumb -O2 -Wall -Wextra -ffunction-sections -fdata-sections -c xosc.c -o xosc.o
+arm-none-eabi-gcc -mcpu=cortex-m33 -mthumb -Og -g3 -Wall -Wextra -ffunction-sections -fdata-sections -c xosc.c -o xosc.o
 if errorlevel 1 goto error
 
-arm-none-eabi-gcc -mcpu=cortex-m33 -mthumb -O2 -Wall -Wextra -ffunction-sections -fdata-sections -c reset.c -o reset.o
+arm-none-eabi-gcc -mcpu=cortex-m33 -mthumb -Og -g3 -Wall -Wextra -ffunction-sections -fdata-sections -c reset.c -o reset.o
 if errorlevel 1 goto error
 
-arm-none-eabi-gcc -mcpu=cortex-m33 -mthumb -O2 -Wall -Wextra -ffunction-sections -fdata-sections -c coprocessor.c -o coprocessor.o
+arm-none-eabi-gcc -mcpu=cortex-m33 -mthumb -Og -g3 -Wall -Wextra -ffunction-sections -fdata-sections -c coprocessor.c -o coprocessor.o
 if errorlevel 1 goto error
 
-arm-none-eabi-gcc -mcpu=cortex-m33 -mthumb -O2 -Wall -Wextra -ffunction-sections -fdata-sections -c gpio.c -o gpio.o
+arm-none-eabi-gcc -mcpu=cortex-m33 -mthumb -Og -g3 -Wall -Wextra -ffunction-sections -fdata-sections -c gpio.c -o gpio.o
 if errorlevel 1 goto error
 
-arm-none-eabi-gcc -mcpu=cortex-m33 -mthumb -O2 -Wall -Wextra -ffunction-sections -fdata-sections -c uart.c -o uart.o
+arm-none-eabi-gcc -mcpu=cortex-m33 -mthumb -Og -g3 -Wall -Wextra -ffunction-sections -fdata-sections -c uart.c -o uart.o
 if errorlevel 1 goto error
 
-arm-none-eabi-gcc -mcpu=cortex-m33 -mthumb -O2 -Wall -Wextra -ffunction-sections -fdata-sections -c delay.c -o delay.o
+arm-none-eabi-gcc -mcpu=cortex-m33 -mthumb -Og -g3 -Wall -Wextra -ffunction-sections -fdata-sections -c delay.c -o delay.o
 if errorlevel 1 goto error
 
-arm-none-eabi-gcc -mcpu=cortex-m33 -mthumb -O2 -Wall -Wextra -ffunction-sections -fdata-sections -c main.c -o main.o
+arm-none-eabi-gcc -mcpu=cortex-m33 -mthumb -Og -g3 -Wall -Wextra -ffunction-sections -fdata-sections -c main.c -o main.o
 if errorlevel 1 goto error
 
-arm-none-eabi-gcc -mcpu=cortex-m33 -mthumb -O2 -Wall -Wextra -ffunction-sections -fdata-sections -c image_def.c -o image_def.o
+arm-none-eabi-gcc -mcpu=cortex-m33 -mthumb -Og -g3 -Wall -Wextra -ffunction-sections -fdata-sections -c image_def.c -o image_def.o
 if errorlevel 1 goto error
 
 REM ==============================================================================
